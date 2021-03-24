@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="no_margin">0dp</dimen>
+    <dimen name="margin_little">1dp</dimen>
+    <dimen name="margin_tiny">2dp</dimen>
+    <dimen name="margin_xxxsmall">4dp</dimen>
+    <dimen name="margin_xxsmall">6dp</dimen>
+    <dimen name="margin_xsmall">8dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_medium_small">12dp</dimen>
+    <dimen name="margin_xmedium_small">14dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_medium_large">20dp</dimen>
+    <dimen name="margin_xxmedium_large">24dp</dimen>
+    <dimen name="margin_xxxmedium_large">28dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_large_x">36dp</dimen>
+    <dimen name="margin_large_xx">40dp</dimen>
+    <dimen name="margin_large_xxx">48dp</dimen>
+    <dimen name="margin_xlarge">56dp</dimen>
+    <dimen name="margin_xxlarge">60dp</dimen>
+    <dimen name="margin_xxxlarge">64dp</dimen>
+    <dimen name="margin_xxxxlarge">68dp</dimen>
+    <dimen name="margin_giant">72dp</dimen>
+    <dimen name="margin_xgiant">88dp</dimen>
+
+    <dimen name="thumbnail_size">88dp</dimen>
+    <dimen name="shimmers_height">100dp</dimen>
+</resources>

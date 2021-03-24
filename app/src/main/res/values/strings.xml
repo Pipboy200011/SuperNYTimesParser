@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Super NYTimes Parser</string>
+    <string name="api_key">a4G3srFNAbvBzWhN93w5fAohLuVOGeib</string>
+    <string name="share">share</string>
+    <string name="standard_error_message">Something went wrong, take a break</string>
+    <string name="refresh">refresh</string>
 </resources>
