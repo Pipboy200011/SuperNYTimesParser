@@ -90,11 +90,11 @@ class MainActivity : BaseActivity() {
     }
 
     private fun initObservers() {
-        mainViewModel.newsLiveData.observe(this, { news -> updateNews(news) })
-        mainViewModel.showShimmersLiveData.observe(this, { show -> updateShimmersVisibilityState(show) })
-        mainViewModel.showDetailScreenLiveData.observe(this, { newsUrl -> showDetailScreen(newsUrl) })
-        mainViewModel.showErrorLiveData.observe(this, { text -> showErrorText(text) })
-        mainViewModel.hideSearchLiveData.observe(this, { hide -> updateActiveSearchVisibilityState(hide) })
+        mainViewModel.newsLiveData().observe(this, { news -> updateNews(news) })
+        mainViewModel.showShimmersLiveData().observe(this, { show -> updateShimmersVisibilityState(show) })
+        mainViewModel.showDetailScreenLiveData().observe(this, { newsUrl -> showDetailScreen(newsUrl) })
+        mainViewModel.showErrorLiveData().observe(this, { text -> showErrorText(text) })
+        mainViewModel.hideSearchLiveData().observe(this, { hide -> updateActiveSearchVisibilityState(hide) })
     }
 
     private fun initAdapter() {

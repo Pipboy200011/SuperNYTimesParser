@@ -53,11 +53,11 @@ class MainViewModelTest {
     fun setUp() {
         val rxSchedulersTestUtils = RxSchedulersTestUtils()
         mainViewModel = MainViewModel(mainInteractor, rxSchedulersTestUtils, resourceManager)
-        mainViewModel.newsLiveData.observeForever(newsObserver)
-        mainViewModel.showShimmersLiveData.observeForever(showShimmersObserver)
-        mainViewModel.showDetailScreenLiveData.observeForever(showDetailScreenObserver)
-        mainViewModel.showErrorLiveData.observeForever(showErrorObserver)
-        mainViewModel.hideSearchLiveData.observeForever(hideSearchObserver)
+        mainViewModel.newsLiveData().observeForever(newsObserver)
+        mainViewModel.showShimmersLiveData().observeForever(showShimmersObserver)
+        mainViewModel.showDetailScreenLiveData().observeForever(showDetailScreenObserver)
+        mainViewModel.showErrorLiveData().observeForever(showErrorObserver)
+        mainViewModel.hideSearchLiveData().observeForever(hideSearchObserver)
     }
 
     @Test

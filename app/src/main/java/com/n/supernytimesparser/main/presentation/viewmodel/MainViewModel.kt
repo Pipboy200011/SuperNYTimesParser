@@ -1,6 +1,7 @@
 package com.n.supernytimesparser.main.presentation.viewmodel
 
 import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.n.supernytimesparser.R
 import com.n.supernytimesparser.application.utils.resource.ResourceManager
@@ -25,11 +26,17 @@ class MainViewModel(
 
     private var newsList: List<NewswireBean> = arrayListOf()
 
-    val newsLiveData: MutableLiveData<List<NewswireBean>> = MutableLiveData()
-    val showShimmersLiveData: MutableLiveData<Boolean> = MutableLiveData()
-    val showDetailScreenLiveData: MutableLiveData<String> = MutableLiveData()
-    val showErrorLiveData: MutableLiveData<String> = MutableLiveData()
-    val hideSearchLiveData: MutableLiveData<Boolean> = MutableLiveData()
+    private val newsLiveData: MutableLiveData<List<NewswireBean>> = MutableLiveData()
+    private val showShimmersLiveData: MutableLiveData<Boolean> = MutableLiveData()
+    private val showDetailScreenLiveData: MutableLiveData<String> = MutableLiveData()
+    private val showErrorLiveData: MutableLiveData<String> = MutableLiveData()
+    private val hideSearchLiveData: MutableLiveData<Boolean> = MutableLiveData()
+
+    fun newsLiveData(): LiveData<List<NewswireBean>> = newsLiveData
+    fun showShimmersLiveData(): LiveData<Boolean> = showShimmersLiveData
+    fun showDetailScreenLiveData(): LiveData<String> = showDetailScreenLiveData
+    fun showErrorLiveData(): LiveData<String> = showErrorLiveData
+    fun hideSearchLiveData(): LiveData<Boolean> = hideSearchLiveData
 
     fun init() {
         getTimesNewswire()

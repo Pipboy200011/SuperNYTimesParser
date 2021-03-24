@@ -1,5 +1,6 @@
 package com.n.supernytimesparser.main.presentation.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.n.supernytimesparser.base.presentation.viewmodel.BaseViewModel
 
@@ -12,8 +13,11 @@ class DetailViewModel : BaseViewModel() {
 
     private var newsUrl: String? = null
 
-    val newsUrlLiveData: MutableLiveData<String> = MutableLiveData()
-    val shareNewsUrlLiveData: MutableLiveData<String> = MutableLiveData()
+    private val newsUrlLiveData: MutableLiveData<String> = MutableLiveData()
+    private val shareNewsUrlLiveData: MutableLiveData<String> = MutableLiveData()
+
+    fun newsUrlLiveData(): LiveData<String> = newsUrlLiveData
+    fun shareNewsUrlLiveData(): LiveData<String> = shareNewsUrlLiveData
 
     /**
      * set new url to show content

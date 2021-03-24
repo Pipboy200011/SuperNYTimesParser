@@ -8,7 +8,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.n.supernytimesparser.R
-import com.n.supernytimesparser.application.utils.share.ShareDataUtils
+import com.n.supernytimesparser.application.utils.share.shareDataLikeLink
 import com.n.supernytimesparser.base.presentation.ui.BaseActivity
 import com.n.supernytimesparser.base.presentation.viewmodel.ViewModelProviderFactory
 import com.n.supernytimesparser.databinding.DetailActivityBinding
@@ -75,8 +75,8 @@ class DetailActivity : BaseActivity() {
     }
 
     private fun initObservers() {
-        detailViewModel.newsUrlLiveData.observe(this, { newsUrl -> updateContent(newsUrl) })
-        detailViewModel.shareNewsUrlLiveData.observe(this, { newsUrl -> shareNewsUrl(newsUrl) })
+        detailViewModel.newsUrlLiveData().observe(this, { newsUrl -> updateContent(newsUrl) })
+        detailViewModel.shareNewsUrlLiveData().observe(this, { newsUrl -> shareNewsUrl(newsUrl) })
     }
 
     private fun setToolbarParameters() {
@@ -99,7 +99,7 @@ class DetailActivity : BaseActivity() {
     }
 
     private fun shareNewsUrl(newsUrl: String) {
-        ShareDataUtils.shareDataLikeLink(this, newsUrl)
+        shareDataLikeLink(this, newsUrl)
     }
 
     companion object {

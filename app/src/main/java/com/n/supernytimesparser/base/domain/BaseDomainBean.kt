@@ -14,11 +14,4 @@ class BaseDomainBean<T> {
      * error
      */
     var errorObject: ErrorMessage? = null
-
-    override fun toString(): String {
-        return "BaseDomainBean(" +
-                "successObject=$successObject, " +
-                "errorObject=$errorObject" +
-                ")"
-    }
 }

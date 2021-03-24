@@ -10,6 +10,5 @@ import com.google.gson.annotations.SerializedName
 class BaseErrorResponseBody {
 
     @SerializedName("faultstring")
-    @Expose
     var message: String? = null
 }
